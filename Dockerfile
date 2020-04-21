@@ -12,4 +12,3 @@ RUN mkdir -p /home/steam/.klei/DoNotStarveTogether/world \
 USER steam
 CMD ["/home/steam/start_server.sh"]
 VOLUME /home/steam/.klei/DoNotStarveTogether/world
-EXPOSE 11000 11001
