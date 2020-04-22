@@ -4,7 +4,7 @@ start_server.sh 是一个启动脚本，会自动更新steamcmd以及Don’t Sta
 test文件夹测试用  
 ## 安装Docker
 可以有阅读官方文档 [Get Docker](https://docs.docker.com/get-docker/)  
-## 拉起镜像到本地
+## 下载镜像到本地
 ```
 docker pull eromangasensei/dstds:latest
 ```
