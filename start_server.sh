@@ -1,6 +1,7 @@
 #!/bin/bash
 
 steamcmd_dir="/home/steam/steamcmd"
+steam_user="anonymous"
 install_dir="/home/steam/dstds"
 cluster_name="world"
 dontstarve_dir="/home/steam/.klei/DoNotStarveTogether"
@@ -36,7 +37,7 @@ if [ ! -e $dontstarve_dir ]; then
     mkdir -p $dontstarve_dir
 fi
 
-./steamcmd.sh +force_install_dir "$install_dir" +login anonymous +app_update 343050 validate +quit
+./steamcmd.sh +force_install_dir "$install_dir" +login $steam_user +app_update 343050 validate +quit
 
 # download mods
 modsfile=''
@@ -63,7 +64,7 @@ run_shared=(./dontstarve_dedicated_server_nullrenderer)
 run_shared+=(-console)
 run_shared+=(-cluster "$cluster_name")
 run_shared+=(-monitor_parent_process $$)
-"${run_shared[@]}" -shard Caves  | sed 's/^/Caves:  /' &
+"${run_shared[@]}" -shard Master | sed 's/^/Master: ' &
 if [ -e $dontstarve_dir/$cluster_name/Caves ]; then
-    "${run_shared[@]}" -shard Master | sed 's/^/Master: /'
+	"${run_shared[@]}" -shard Caves  | sed 's/^/Caves:  /'
 fi
