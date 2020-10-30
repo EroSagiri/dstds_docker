@@ -3,7 +3,7 @@
 start_server.sh 是一个启动脚本，会自动更新steamcmd以及Don’t Starve Together Dedicated Servers，并且启动Don’t Starve Together Dedicated Servers  
 test文件夹测试用  
 ## 安装Docker
-可以有阅读官方文档 [Get Docker](https://docs.docker.com/get-docker/)  
+可以阅读官方文档 [Get Docker](https://docs.docker.com/get-docker/)  
 ## 下载镜像到本地
 ```
 docker pull eromangasensei/dstds:latest
